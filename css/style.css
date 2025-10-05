@@ -1,0 +1,228 @@
+/* Basic variables */
+
+
+:root{
+  --brand:#6db49b;
+  --muted:#6b7280;
+  --bg:#f6fff8;
+  --white:#ffffff;
+  --card-shadow: 0 6px 18px rgba(8,15,20,0.06);
+  --container:1100px;
+}
+
+/* Reset + base */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#222;background:var(--bg);-webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+/* HEADER */
+.site-header{background:var(--white);position:sticky;top:0;z-index:999;border-bottom:1px solid rgba(135, 255, 29, 0.431)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{height:44px;width:auto}
+.brand-name{font-weight:700;color:var(--brand);font-size:1rem}
+.nav a{color:#1f2937;text-decoration:none;margin-left:22px;font-weight:600}
+.nav a:hover{color:var(--brand)}
+.nav a.active{color:var(--brand);text-decoration:underline}
+
+.hero {
+  background: linear-gradient(180deg, hsl(202, 36%, 77%) 0%, #85d4a07f 100%);
+  padding: 80px 0;
+  color: #5a06eb;
+}
+.hero-inner{display:flex;align-items:center;gap:30px;flex-wrap:wrap}
+.hero-text{flex:1;min-width:300px}
+.hero-text h1{font-size:34px;color:var(--brand);margin-bottom:12px;line-height:1.05}
+.hero-text .lead{color:var(--muted);max-width:620px}
+.hero-cta{margin-top:18px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+.btn.primary{background:var(--brand);color:var(--white);margin-right:10px}
+.btn.ghost{border:2px solid rgba(10,104,71,0.12);color:var(--brand);background:transparent}
+
+/* collage on right */
+.hero-collage{display:flex;flex-direction:column;gap:12px;align-items:center}
+.hero-collage img{width:300px;height:140px;object-fit:cover;border-radius:10px;box-shadow:var(--card-shadow)}
+
+/* ABOUT */
+.section{padding:72px 0}
+.about-section {
+  background: linear-gradient(135deg,  #85d4a07f 0%, #e4ecf5 100%);
+}
+.about-grid{display:grid;grid-template-columns:1fr 460px;gap:32px;align-items:center}
+.about-section img{width:100%;border-radius:12px;box-shadow:var(--card-shadow)}
+.about-section h2{color:var(--brand);margin-bottom:14px}
+.mission-list{margin-top:12px}
+.mission-list li{margin:8px 0;color:var(--muted)}
+
+/* PRODUCTS */
+.products-section h2{color:var(--brand)}
+.products-section {
+  background: linear-gradient(135deg, #9dc2edd0 0%, #f5faf8 50%, #ffffff 100%);
+  padding: 72px 0;
+}
+.product-category{margin:28px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product{background:var(--white);padding:10px;border-radius:10px;text-align:center;box-shadow:var(--card-shadow)}
+.product img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+.product figcaption{margin-top:10px;font-weight:600;color:#0f1724}
+
+/* QUALITY */
+.quality-section h2{color:var(--brand)}
+.quality-section {
+  background: linear-gradient(135deg, #efefe7 0%, #f3f1ecaa 50%, #ffffff 100%);
+  padding: 72px 0;
+}
+.sub{color:var(--muted);margin-bottom:22px}
+.quality-category{margin-top:34px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:16px}
+.qa-card{background:var(--white);border-radius:12px;padding:12px;box-shadow:var(--card-shadow);text-align:left;overflow:hidden}
+.qa-card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.qa-card h4{color:var(--brand);margin-top:12px}
+.qa-card p{color:var(--muted);margin-top:8px;font-size:0.95rem}
+
+/* CONTACT SECTION */
+.contact-section {
+  position: relative;
+  background-image: url("images/about-collage.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 0;
+}
+.contact-section {
+  background: linear-gradient(135deg, #e4ecf5 0%, #f5faf8 50%, #ffffff 100%);
+  padding: 72px 0;
+}
+.contact-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  height: 100%;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 700px;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.contact-container p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #666;
+}
+
+.contact-form button {
+  background-color: #009879;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #007b63;
+}
+
+/* FOOTER */
+.site-footer {
+  background: linear-gradient(90deg, #0a6847 0%, #0f8b61 100%);
+  color: #fff;
+  padding: 35px 0;
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px; /* lebih lebar biar longgar */
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #a2e8bb;
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 980px){
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(1,1fr)}
+  .about-section .about-grid{grid-template-columns:1fr}
+  .hero-collage img{width:160px;height:110px}
+}
+@media (max-width:560px){
+  .nav{display:none}
+  .hero-text h1{font-size:22px}
+  .brand-name{display:none}
+  .hero-collage img{width:120px;height:90px}
+}
